@@ -30,14 +30,14 @@ public class QuizTest {
      */
     @Before
     public void setUp() throws IOException{
-        // 启动appium
+       /* // 启动appium
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("deviceName", "emulator-5554");//指定测试机
         capabilities.setCapability("automationName", "Appium");
         capabilities.setCapability("platformName", "Android");// 指定测试平台
-        capabilities.setCapability("platformVersion", "22");//平台版本
+        capabilities.setCapability("platformVersion", "22");//平台版本*/
 
-        // 配置测试apk
+       /* // 配置测试apk
         capabilities.setCapability("appPackage", "com.example.quizactivity");//测试的包
         capabilities.setCapability("appActivity", "com.example.quizactivity.QuizActivity");//测试的activity
         capabilities.setCapability("sessionoverride", true);//每次启动时覆盖session，否则第二次后运行会报错不能新建session
@@ -45,15 +45,31 @@ public class QuizTest {
         capabilities.setCapability("resetkeyboard", false); //设置默认键盘为appium的键盘
         driver = new AppiumDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+*/
+        // 启动appium
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability("deviceName", "192.168.67.101:5555");//指定测试机
+        capabilities.setCapability("automationName", "Appium");
+        capabilities.setCapability("platformName", "Android");// 指定测试平台
+        capabilities.setCapability("platformVersion", "7.0");//平台版本
 
-        // 安装APK,如果真机设备已经安装，则不需要重新安装
+              // 配置测试apk
+        capabilities.setCapability("appPackage", "com.android.messaging");//测试的包
+        capabilities.setCapability("appActivity", "com.android.messaging.ui.conversationlist.ConversationListActivity");//测试的activity
+        capabilities.setCapability("sessionoverride", true);//每次启动时覆盖session，否则第二次后运行会报错不能新建session
+        capabilities.setCapability("unicodekeyboard", true);//设置键盘
+        capabilities.setCapability("resetkeyboard", false); //设置默认键盘为appium的键盘
+        driver = new AppiumDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+       /* // 安装APK,如果真机设备已经安装，则不需要重新安装
         if (isInstall){
             File classpathRoot = new File(System.getProperty("user.dir"));
             File appDir = new File(classpathRoot,"apps");
             File app = new File(appDir,"QuizActivity.apk");
             capabilities.setCapability("app", app.getAbsolutePath());
         }
-        startRecord();
+        startRecord();*/
 
     }
 
@@ -63,7 +79,8 @@ public class QuizTest {
      */
     @Test
     public void PreQuestion() throws InterruptedException{
-        driver.findElementById("com.example.quizactivity:id/prev_button").click();// 点击上一个按钮
+        Thread.sleep(2000);
+        driver.findElementById("com.android.messaging:id/start_new_conversation_button").click();// 点击上一个按钮
         Thread.sleep(2000);
         driver.findElementById("com.example.quizactivity:id/next_button").click();//点击下一个按钮
         Thread.sleep(2000);
@@ -73,7 +90,7 @@ public class QuizTest {
     }
 
 
-    /**
+    /*
      * 结束启动
      */
     @After
