@@ -54,8 +54,8 @@ public class QuizTest {
         capabilities.setCapability("platformVersion", "7.0");//平台版本
 
               // 配置测试apk
-        capabilities.setCapability("appPackage", "com.android.messaging");//测试的包
-        capabilities.setCapability("appActivity", "com.android.messaging.ui.conversationlist.ConversationListActivity");//测试的activity
+        capabilities.setCapability("appPackage", "com.example.androidunittest");//测试的包
+        capabilities.setCapability("appActivity", "com.example.androidunittest.MainActivity");//测试的activity
         capabilities.setCapability("sessionoverride", true);//每次启动时覆盖session，否则第二次后运行会报错不能新建session
         capabilities.setCapability("unicodekeyboard", true);//设置键盘
         capabilities.setCapability("resetkeyboard", false); //设置默认键盘为appium的键盘
@@ -80,7 +80,7 @@ public class QuizTest {
     @Test
     public void PreQuestion() throws InterruptedException{
         Thread.sleep(2000);
-        driver.findElementById("com.android.messaging:id/start_new_conversation_button").click();// 点击上一个按钮
+        driver.findElementById("com.example.androidunittest:id/btnLog").click();// 点击上一个按钮
         Thread.sleep(2000);
         driver.findElementById("com.example.quizactivity:id/next_button").click();//点击下一个按钮
         Thread.sleep(2000);
