@@ -72,11 +72,11 @@ public class QuizTest {
         startRecord();*/
 
     }
-
-    /**
+/*
+    *//**
      *  点击显示上一条
      * @throws InterruptedException
-     */
+     *//*
     @Test
     public void PreQuestion() throws InterruptedException{
         //gongsi
@@ -97,7 +97,7 @@ public class QuizTest {
       //  String tips = driver.findElementById("com.example.quizactivity:id/question_text_view").getText();
       //  Assert.assertEquals(tips, "The Suez Canal connects the Red Sea and the Indian Ocean.");
         Thread.sleep(2000);
-    }
+    }*/
 
 
     /*
