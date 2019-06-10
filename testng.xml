@@ -3,7 +3,7 @@
 <suite name="test111" parallel="true">
     <test name="test111" >
         <classes>
-            <class name="com.company.QuizTest"/>
+            <class name="com.company.Page"/>
         </classes>
     </test> <!-- Test -->
     <listeners>
