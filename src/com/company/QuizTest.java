@@ -1,5 +1,6 @@
 package com.company;
 
+import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 public class QuizTest extends Page {
@@ -35,5 +36,6 @@ public class QuizTest extends Page {
      public void test1() throws InterruptedException {
         Thread.sleep(2000);
         System.out.println("test");
+        Reporter.log("testestet");
      }
 }

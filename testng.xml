@@ -3,7 +3,9 @@
 <suite name="test111" parallel="true">
     <test name="test111" >
         <classes>
-            <class name="com.company.QuizTest"/>
+           <!-- <class name="com.company.QuizTest"/> -->
+            <class name="com.company.test1"/> <!--指定运行测试文件-->
+
         </classes>
     </test> <!-- Test -->
     <listeners>
