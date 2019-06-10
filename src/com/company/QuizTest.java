@@ -18,7 +18,8 @@ public class QuizTest extends Page {
         driver.findElementById("com.android.mms:id/recipients_editor").sendKeys("123333");//输入手机号
         Thread.sleep(2000);
         driver.findElementById("com.android.mms:id/send_button_sms").click();
-
+        Thread.sleep(2000);
+        driver.findElementById("android:id/button1").click();
 
         //  driver.findElementByAccessibilityId("action_compose_new").click();
         Thread.sleep(2000);
@@ -30,4 +31,9 @@ public class QuizTest extends Page {
         Thread.sleep(2000);
     }
 
+    @Test
+     public void test1() throws InterruptedException {
+        Thread.sleep(2000);
+        System.out.println("test");
+     }
 }

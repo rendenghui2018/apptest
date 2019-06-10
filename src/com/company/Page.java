@@ -35,7 +35,7 @@ public class Page {
         capabilities.setCapability("deviceName", "192.168.250.101:5555");//指定测试机
         capabilities.setCapability("automationName", "Appium");
         capabilities.setCapability("platformName", "Android");// 指定测试平台
-        capabilities.setCapability("platformVersion", "4.3");//平台版本
+        capabilities.setCapability("platformVersion", "4.3");//安卓平台版本
 
         // 配置测试apk
         capabilities.setCapability("appPackage", "com.android.mms");//测试的包
