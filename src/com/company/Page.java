@@ -30,7 +30,7 @@ public class Page {
      */
     @BeforeClass
     public void setUp() throws IOException{
-        /*// 启动appium gongsi
+        // 启动appium gongsi
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("deviceName", "192.168.250.101:5555");//指定测试机
         capabilities.setCapability("automationName", "Appium");
@@ -46,8 +46,7 @@ public class Page {
         //driver = new AppiumDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
         driver=new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-*/
-        // 启动appium suse
+       /* // 启动appium suse
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("deviceName", "192.168.67.101:5555");//指定测试机
         capabilities.setCapability("automationName", "Appium");
@@ -61,7 +60,7 @@ public class Page {
         capabilities.setCapability("unicodekeyboard", true);//设置键盘
         capabilities.setCapability("resetkeyboard", false); //设置默认键盘为appium的键盘
         driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);*/
        /* // 安装APK,如果真机设备已经安装，则不需要重新安装
         if (isInstall){
             File classpathRoot = new File(System.getProperty("user.dir"));
