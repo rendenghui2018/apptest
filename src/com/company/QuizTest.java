@@ -11,7 +11,7 @@ import java.util.List;
 public class QuizTest extends Page {
 
     /**
-     *  点击显示上一条
+     *  安卓自带的发送短信息，删除发送的信息
      * @throws InterruptedException
      */
     @Test
@@ -27,13 +27,17 @@ public class QuizTest extends Page {
         Thread.sleep(2000);
         driver.findElementById("android:id/button1").click();
 
+        //长按某个元素
         TouchAction ta = new TouchAction(driver);
-        WebElement el = driver.findElementByXPath("//*[@resource-id='com.android.mms:id/msg_list_item_send' and @index='2']");
+        WebElement el = driver.findElementByXPath("//*[@resource-id='com.android.mms:id/msg_list_item_send' and @index='1']");
         ta.longPress(el,5000).release().perform();//长按10s
         Thread.sleep(2000);
        // driver.findElementByName("Delete").click();
-        driver.findElementByXPath("//*[@class=android.widget.LinearLayout' and @index='4' ]/[@class='android.widget.RelativeLayout']/[@resource-id='android:id/title']").click();
-
+        //层级定位方式 5是个数
+        driver.findElementByXPath("//*[@resource-id='android:id/select_dialog_listview']/android.widget.LinearLayout[5]").click();
+        Thread.sleep(1000);
+        //点击的删除的按钮
+        driver.findElementById("android:id/button1").click();
 
        // driver.findElementsByXPath("/hierarchy/android.widget.FrameLayout/android.view.View/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.ListView/android.widget.LinearLayout[6]").
 
