@@ -33,8 +33,12 @@ public class QuizTest extends Page {
         ta.longPress(el,5000).release().perform();//长按10s
         Thread.sleep(2000);
        // driver.findElementByName("Delete").click();
-        //层级定位方式 5是个数
-        driver.findElementByXPath("//*[@resource-id='android:id/select_dialog_listview']/android.widget.LinearLayout[5]").click();
+        //使用xpath方式层级定位方式 5是个数
+       // driver.findElementByXPath("//*[@resource-id='android:id/select_dialog_listview']/android.widget.LinearLayout[5]").click();
+       //使用元素的层级定位方式
+        WebElement delete=driver.findElementById("android:id/select_dialog_listview");
+        List<WebElement> deletes=delete.findElements(By.className("android.widget.LinearLayout"));
+        deletes.get(4).click();
         Thread.sleep(1000);
         //点击的删除的按钮
         driver.findElementById("android:id/button1").click();
