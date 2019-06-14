@@ -6,6 +6,7 @@ import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 import io.appium.java_client.android.AndroidDriver;
+import org.openqa.selenium.DeviceRotation;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import io.appium.java_client.AppiumDriver;
@@ -18,6 +19,7 @@ public class Page {
 
     public AppiumDriver driver;
     private boolean isInstall = false;
+
 
     public void startRecord () throws IOException{
       //  Runtime rc = Runtime.getRuntime();
@@ -46,7 +48,8 @@ public class Page {
         //driver = new AppiumDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
         driver=new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-       /* // 启动appium suse
+
+        /* // 启动appium suse
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("deviceName", "192.168.67.101:5555");//指定测试机
         capabilities.setCapability("automationName", "Appium");

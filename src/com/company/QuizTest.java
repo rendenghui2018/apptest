@@ -43,9 +43,10 @@ public class QuizTest extends Page {
         //点击的删除的按钮
         driver.findElementById("android:id/button1").click();
 
-       // driver.findElementsByXPath("/hierarchy/android.widget.FrameLayout/android.view.View/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.ListView/android.widget.LinearLayout[6]").
+       // WebElement element = driver.findElementByAndroidUIAutomator("new UiSelector().resourceId(\"com.oupeng.mini.android:id/search_engine_title");
 
-        //  driver.findElementByAccessibilityId("action_compose_new").click();
+
+        // driver.findElementByAccessibilityId("action_compose_new").click();
         Thread.sleep(2000);
         //suse
         // driver.findElementById("com.example.androidunittest:id/btnLog").click();//点击下一个按钮
