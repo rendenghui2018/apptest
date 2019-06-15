@@ -1,5 +1,7 @@
 package susetest;
 
+import io.appium.java_client.android.AndroidDriver;
+import org.openqa.selenium.WebElement;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 
@@ -21,6 +23,9 @@ public class quizTest extends page {
         //  String tips = driver.findElementById("com.example.quizactivity:id/question_text_view").getText();
         //  Assert.assertEquals(tips, "The Suez Canal connects the Red Sea and the Indian Ocean.");
         Thread.sleep(2000);
+      //  String uiautomatorExpress="new UiSelector().textContains(\""+text+"\")";
+      //  ((AndroidDriver) driver).findElementByAndroidUIAutomator("test");
+        WebElement element =((AndroidDriver) driver).findElementByAndroidUIAutomator("new UiSelector().resourceId(\"com.oupeng.mini.android:id/search_engine_title\")");
     }
 
     @Test
