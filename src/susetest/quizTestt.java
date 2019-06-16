@@ -3,9 +3,10 @@ package susetest;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Reporter;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 
-public class quizTest extends page {
+public class quizTestt extends page {
 
     /**
      *  点击显示上一条
@@ -29,6 +30,7 @@ public class quizTest extends page {
       //  ((AndroidDriver) driver).findElementByAndroidUIAutomator("test");
 
     }
+
 
     @Test
      public void test1() throws InterruptedException {
