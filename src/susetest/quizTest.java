@@ -15,7 +15,9 @@ public class quizTest extends page {
     public void PreQuestion() throws InterruptedException{
 
         //suse
-         driver.findElementById("com.android.messaging:id/start_new_conversation_button").click();//点击下一个按钮
+        WebElement element =((AndroidDriver) driver).findElementByAndroidUIAutomator("new UiSelector().resourceId(\"com.android.messaging:id/start_new_conversation_button\")");
+        element.click();
+         //driver.findElementById("com.android.messaging:id/start_new_conversation_button").click();//点击下一个按钮
         Thread.sleep(2000);
         driver.findElementById("com.android.messaging:id/recipient_text_view").sendKeys("12323");
         Thread.sleep(2000);
@@ -25,7 +27,7 @@ public class quizTest extends page {
         Thread.sleep(2000);
       //  String uiautomatorExpress="new UiSelector().textContains(\""+text+"\")";
       //  ((AndroidDriver) driver).findElementByAndroidUIAutomator("test");
-        WebElement element =((AndroidDriver) driver).findElementByAndroidUIAutomator("new UiSelector().resourceId(\"com.oupeng.mini.android:id/search_engine_title\")");
+
     }
 
     @Test
