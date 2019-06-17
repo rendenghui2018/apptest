@@ -48,7 +48,7 @@ public class QuizTest extends Page {
 
         // driver.findElementByAccessibilityId("action_compose_new").click();
         Thread.sleep(2000);
-        //suse
+
         // driver.findElementById("com.example.androidunittest:id/btnLog").click();//点击下一个按钮
         Thread.sleep(2000);
         //  String tips = driver.findElementById("com.example.quizactivity:id/question_text_view").getText();
