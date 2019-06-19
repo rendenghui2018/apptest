@@ -14,8 +14,8 @@ public class quizTestt extends page {
      */
     @Test
     public void PreQuestion() throws InterruptedException{
-        WebElement element =((AndroidDriver) driver).findElementByAndroidUIAutomator("new UiSelector().resourceId(\"com.android.messaging:id/start_new_conversation_button\")");
-        element.click();
+       // WebElement element =((AndroidDriver) driver).findElementByAndroidUIAutomator("new UiSelector().resourceId(\"com.android.messaging:id/start_new_conversation_button\")");
+       // element.click();
          //driver.findElementById("com.android.messaging:id/start_new_conversation_button").click();//点击下一个按钮
         Thread.sleep(2000);
         driver.findElementById("com.android.messaging:id/recipient_text_view").sendKeys("12323");
