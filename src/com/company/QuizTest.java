@@ -1,6 +1,8 @@
 package com.company;
 
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.TouchAction;
+import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Reporter;
@@ -43,7 +45,7 @@ public class QuizTest extends Page {
         //点击的删除的按钮
         driver.findElementById("android:id/button1").click();
 
-       // WebElement element = driver.findElementByAndroidUIAutomator("new UiSelector().resourceId(\"com.oupeng.mini.android:id/search_engine_title");
+        //WebElement element = ((AndroidDriver) driver).findElementByAndroidUIAutomator("new UiSelector().resourceId(\"com.oupeng.mini.android:id/search_engine_title");
 
 
         // driver.findElementByAccessibilityId("action_compose_new").click();
