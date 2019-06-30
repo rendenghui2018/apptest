@@ -27,6 +27,7 @@ public class LoginTest extends page {
         tAction.press(width/2,y1).waitAction(200).moveTo(width/2,y2).release().perform();
         Thread.sleep(1000);
         driver.findElementByAccessibilityId("Views").click();
+        Thread.sleep(2000);
         tAction.press(width/2,y1).waitAction(200).moveTo(width/2,y2).release().perform();
         tAction.press(width/2,y1).waitAction(200).moveTo(width/2,y2).release().perform();
         driver.findElementByAccessibilityId("WebView").click();
@@ -36,9 +37,12 @@ public class LoginTest extends page {
             System.out.println(contextName); // 用于返回被测app是NATIVE_APP还是WEBVIEW，如果两者都有就是混合型App
         }
         Thread.sleep(2000);
-        //driver.context("WEBVIEW_com.example.android.apis");
-       // driver.switchTo().window("WEBVIEW_io.appium.android.apis");
-        driver.switchTo().window("WEBVIEW_io.appium.android.apis");
+        //driver.context("WEBVIEW_com.example.android.apis");//无法切换确认版本
+        driver.context("WEBVIEW_io.appium.android.apis");
+        Thread.sleep(2000);
+        driver.findElementByLinkText("Hello World! - 1").click();
+
+        //driver.switchTo().window("WEBVIEW_io.appium.android.apis");
 
 
        // driver.context("WEBVIEW_io.appium.android.apis");

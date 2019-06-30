@@ -29,36 +29,31 @@ public class page {
     public void setUp() throws IOException{
 
 //        // 启动appium suse
-//        DesiredCapabilities capabilities = new DesiredCapabilities();
-//        capabilities.setCapability("deviceName", "192.168.250.101:5555");//指定测试机
-//        capabilities.setCapability("automationName", "Appium");
-//        capabilities.setCapability("platformName", "Android");// 指定测试平台
-//        capabilities.setCapability("platformVersion", "7.0");//平台版本
-//
-//              // 配置测试apk
-//        capabilities.setCapability("appPackage", "com.hrsoft.hcm");//测试的包
-//        capabilities.setCapability("appActivity", "io.dcloud.PandoraEntryActivity");//测试的activity
-//        capabilities.setCapability("sessionoverride", true);//每次启动时覆盖session，否则第二次后运行会报错不能新建session
-//        capabilities.setCapability("unicodekeyboard", true);//设置键盘
-//        capabilities.setCapability("resetkeyboard", false); //设置默认键盘为appium的键盘
-//        driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
-//        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-//       /* // 安装APK,如果真机设备已经安装，则不需要重新安装
-//        if (isInstall){
-//            File classpathRoot = new File(System.getProperty("user.dir"));
-//            File appDir = new File(classpathRoot,"apps");
-//            File app = new File(appDir,"QuizActivity.apk");
-//            capabilities.setCapability("app", app.getAbsolutePath());
-//        }
-//        startRecord();*/
-
-        // 启动appium gongsi
+      /*  // 启动appium gongsi
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("deviceName", "192.168.250.101:5555");//指定测试机
         capabilities.setCapability("automationName", "Appium");
+        // capabilities.setCapability("automationName","Selendroid");
+        capabilities.setCapability("platformName", "Android");// 指定测试平台
+        capabilities.setCapability("platformVersion", "7.0");//安卓平台版本
+
+        // 配置测试apk
+        capabilities.setCapability("appPackage", "io.appium.android.apis");//测试的包
+        capabilities.setCapability("appActivity", "io.appium.android.apis.ApiDemos");//测试的activity
+        capabilities.setCapability("sessionoverride", true);//每次启动时覆盖session，否则第二次后运行会报错不能新建session
+        capabilities.setCapability("unicodekeyboard", true);//设置键盘
+        capabilities.setCapability("resetkeyboard", false); //设置默认键盘为appium的键盘
+        //driver = new AppiumDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+        driver=new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);*/
+
+        // 启动appium gongsi
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability("deviceName", "192.168.67.101:5555");//指定测试机
+        capabilities.setCapability("automationName", "Appium");
        // capabilities.setCapability("automationName","Selendroid");
         capabilities.setCapability("platformName", "Android");// 指定测试平台
-        capabilities.setCapability("platformVersion", "4.4");//安卓平台版本
+        capabilities.setCapability("platformVersion", "7.0");//安卓平台版本
 
         // 配置测试apk
         capabilities.setCapability("appPackage", "io.appium.android.apis");//测试的包
